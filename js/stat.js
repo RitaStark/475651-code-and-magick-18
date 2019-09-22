@@ -43,7 +43,6 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.fillText('Список результатов:', CLOUD_X + GAP * 2, CLOUD_Y + GAP * 4);
 
 
-  var names = ['Вы', 'Кекс', 'Катя', 'Игорь'];
 
   var maxTime = getMaxElement(times);
 
