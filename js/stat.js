@@ -44,6 +44,7 @@ window.renderStatistics = function (ctx, names, times) {
 
 
 
+
   var maxTime = getMaxElement(times);
 
   for (var i = 0; i < names.length; i++) {
@@ -51,7 +52,7 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillText(names[i], CLOUD_X + GAP * 4 + FONT_GAP * i + TEXT_WIDTH * i, CLOUD_Y + BAR_HEIGHT + GAP * 9);
     ctx.fillText(Math.round(times[i]), CLOUD_X + GAP * 4 + FONT_GAP * i + TEXT_WIDTH * i, CLOUD_Y * 9 + BAR_HEIGHT - (BAR_HEIGHT * times[i] / maxTime) - GAP * 2);
 
-    if (names[i] == names[0]) {
+    if (names[i] == ['Вы']) {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     } else {
       ctx.fillStyle = 'hsl(227, ' + (times[i] / maxTime * 100) + '%, 50%)';
